@@ -1,0 +1,132 @@
+.contenedor {
+    width: 80%;
+    margin-top: 150px;
+    margin-left: 250px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: sans-serif;
+}
+
+.contenedor h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 100;
+}
+
+.contenedor ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contenedor li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 100;
+}
+
+.contenedor li:last-child {
+    border-bottom: none;
+}
+
+.info-button {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.info-button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Estilo del modal */
+#modal {
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Posición fija para que se quede en el lugar al hacer scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    z-index: 1000; /* Asegúrate de que el modal se muestre por encima de otros elementos */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    display: flex; /* Usamos flexbox para centrar el contenido */
+
+}
+
+/* Estilo del contenido dentro del modal */
+#modalContent {
+    background-color: white; /* Fondo blanco */
+    padding: 20px;
+    max-width: 600px;
+    width: 80%; /* Ancho del modal */
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    margin-top:100px ;
+    position: relative; /* Necesario para posicionar la cruz dentro del modal */
+}
+
+/* Estilo del botón de cierre */
+#closeModal {
+    color: rgb(88, 88, 88);
+    cursor: pointer;
+    font-size: 35px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: 1px solid grey;
+    padding: 5px;
+    border-radius: 10px;
+
+}
+
+/* Opcional: cuando el modal se muestra, puedes agregar una animación */
+#modalContent {
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilo para el enlace del botón de información */
+.info {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    background-color: #C11882; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño del texto */
+    cursor: pointer; /* Cambio de cursor cuando se pasa por encima */
+    display: inline-block; /* Asegura que el enlace tenga dimensiones de bloque */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Efectos de transición */
+}
+
+/* Estilo cuando el enlace está en hover (al pasar el ratón por encima) */
+a:hover {
+    background-color: #e61d9c; /* Cambia el color de fondo */
+    transform: scale(1.1); /* Efecto de aumentar el tamaño */
+}
+
+/* Estilo para cuando el enlace está en foco (al ser clickeado) */
+a:focus {
+    outline: none; /* Elimina el borde azul por defecto */
+    box-shadow: 0 0 10px rgba(72, 152, 228, 0.7); /* Agrega una sombra azul al foco */
+}

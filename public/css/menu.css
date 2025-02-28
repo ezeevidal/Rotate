@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    display: flex; /* Usamos flexbox para el diseño */
+    flex-direction: column; /* Alineamos el header y el contenido verticalmente */
+}
+
+header {
+    background-color: rgb(221, 221, 221);
+    color: grey;
+    padding: 10px 20px;
+    display: flex; /* Usamos flexbox para alinear los elementos horizontalmente */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Alineación vertical centrada */
+    width: 100%; /* Ancho completo */
+    position: fixed; /* Fijamos el header a la parte superior */
+    top: 0; /* Lo fijamos en la parte superior */
+    z-index: 100; /* Aseguramos que esté por encima de otros elementos */
+}
+
+/* Logo */
+#logo, #logo2 {
+    height: 40px;
+}
+
+.botones {
+    width: 200px; /* Ancho del menú */
+    background-color: #333; /* Color de fondo */
+    color: white;
+    padding: 80px 0 20px 0; /* Ajustamos el padding para que no se superponga con el header */
+    display: flex;
+    flex-direction: column; /* Alineación vertical */
+    height: 100vh; /* Altura completa de la ventana */
+    position: fixed; /* Fijamos el menú a la izquierda */
+    top: 0; /* Lo fijamos en la parte superior */
+}
+
+.botones a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.botones a:hover {
+    background-color: #555;
+}
+
+/* Estilos para el contenido principal (opcional) */
+.contenido {
+    margin-left: 200px; /* Ajustamos el margen izquierdo para el contenido */
+    padding: 80px 20px 20px 220px; /* Ajustamos el padding para que no se superponga con el header y el menu */
+    width: calc(100% - 220px); /* Ajustamos el ancho del contenido */
+}
